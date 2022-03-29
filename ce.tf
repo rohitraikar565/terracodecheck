@@ -17,6 +17,9 @@ resource "google_compute_instance" "default" {
   scratch_disk {
     interface = "SCSI"
   }
+  network_interface {
+    network = "default"
+  }
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
