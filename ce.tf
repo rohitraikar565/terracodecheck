@@ -2,9 +2,9 @@ resource "google_service_account" "cee" {
   account_id   = "cee-sa"
 }
 resource "google_compute_instance" "default" {
-  name         = "ubuntu"
-  machine_type = "e2-medium"
-  zone         = "us-central1-a"
+  name         = var.name
+  machine_type = var.machine_type
+  zone         = var.zone
 
 
   boot_disk {
